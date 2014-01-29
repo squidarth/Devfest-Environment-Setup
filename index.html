@@ -50,12 +50,24 @@ of whether you run a PC or a Mac, you can be up and running as soon as you have
 Vagrant installed.</p>
 
 <h3>
+<a name="a-note-on-writing-code" class="anchor" href="#a-note-on-writing-code"><span class="octicon octicon-link"></span></a>A Note on Writing Code</h3>
+
+<p>All programmers have a text editor that they use to write code.  If you're just
+getting started, we highly recommend you download and install <a href="http://www.sublimetext.com/2">Sublime Text</a>.</p>
+
+<h3>
 <a name="opening-up-terminal-mac-only" class="anchor" href="#opening-up-terminal-mac-only"><span class="octicon octicon-link"></span></a>Opening up Terminal (Mac only)</h3>
 
 <p>Terminal is going to be where most of our development-related software will
 be running.  Simply use Spotlight to open it up</p>
 
 <p><img src="http://squidarth.github.io/static/open_terminal.png" alt="terminal open"></p>
+
+<h2>
+<a name="open-up-command-prompt-pc-only" class="anchor" href="#open-up-command-prompt-pc-only"><span class="octicon octicon-link"></span></a>Open up Command Prompt (PC onlY)</h2>
+
+<p>The PC equivalent of Terminal is a program called "Command Prompt".  To open it,
+click the "Start Menu", navigate to "Accessories", and click "Command Prompt"</p>
 
 <h3>
 <a name="installing-git" class="anchor" href="#installing-git"><span class="octicon octicon-link"></span></a>Installing Git</h3>
@@ -69,6 +81,29 @@ If git is installed, you should see the following output:</p>
 
 <p>If not, install git from the <a href="http://git-scm.com/downloads">git website</a>, where
 there are more instructions.</p>
+
+<h3>
+<a name="pc-instructions" class="anchor" href="#pc-instructions"><span class="octicon octicon-link"></span></a>PC Instructions</h3>
+
+<p>On PCs there are a couple extra steps in installing git that you should be
+aware of.</p>
+
+<p>Start out by going through the git installation normally, using the installer
+that you downloaded from the <a href="http://git-scm.com/downloads">git website</a>.</p>
+
+<p><img src="http://squidarth.github.io/static/git_install_msft.PNG" alt="git install"></p>
+
+<p>Once you reach this screen:</p>
+
+<p><img src="http://squidarth.github.io/static/git_setup_msft.PNG" alt="git install"></p>
+
+<p>Select the option that reads "Run Git and included tools from the Windows Command Prompt".
+This is very important!</p>
+
+<p>To make sure that git was installed correctly, open up the Windows Command Prompt
+and type <code>git</code>.  You should see the following output:</p>
+
+<p><img src="http://squidarth.github.io/static/git_successful_msft.PNG" alt="git install"></p>
 
 <h3>
 <a name="installing-virtualbox" class="anchor" href="#installing-virtualbox"><span class="octicon octicon-link"></span></a>Installing VirtualBox</h3>
@@ -109,6 +144,9 @@ is often called the "Command Line", and we'll be using that terminology for the
 rest of this short guide.  In order to execute commands in the command line (which
 you have already done a couple times), type the command and then hit "enter".</p>
 
+<h4>
+<a name="mac" class="anchor" href="#mac"><span class="octicon octicon-link"></span></a>Mac</h4>
+
 <p>When you are using the command line, you are always in a certain directory.  To
 check the directory you are in, simply run <code>pwd</code>.</p>
 
@@ -123,6 +161,19 @@ that you would like to navigate to.  Note that <code>~</code> is the name of you
 directory (the directory where your Documents directory is).</p>
 
 <p><img src="http://squidarth.github.io/static/cd_usage-2.png" alt="cd usage"></p>
+
+<h4>
+<a name="pc" class="anchor" href="#pc"><span class="octicon octicon-link"></span></a>PC</h4>
+
+<p>On PCs, similarly to Mac, in the command prompt, you are always in a certain directory,
+and the path is listed in your prompt, so you always know what directory you
+are in.</p>
+
+<p><code>cd</code> is used to change directories, very similarly to how this is done on Macs.
+Note that on PCs, <code>\</code> is used in writing out directory paths, rather than the
+<code>/</code> used on Macs.</p>
+
+<p><code>dir</code> is used to list files and directories inside folders.</p>
 
 <h3>
 <a name="getting-started-with-vagrant" class="anchor" href="#getting-started-with-vagrant"><span class="octicon octicon-link"></span></a>Getting started with Vagrant</h3>
@@ -168,7 +219,7 @@ simply type the command <code>exit</code>.</p>
 Machine to files on your local computer.  Once inside the Virtual Machine,
 type</p>
 
-<p><code>cd /vagrant</code>, followed by <code>ls</code>, and you'll see that the files in the "flask_test"
+<p><code>cd /vagrant</code>, followed by <code>ls</code> (<code>dir</code>) on PC, and you'll see that the files in your 
 folder on your computer are available on this virtual machine.  To prove to yourself
 that everything is working, type <code>python src/application.py</code>, and open up your
 browser to <a href="http://localhost:5000/">http://localhost:5000</a>.</p>
@@ -220,6 +271,9 @@ the box working again.</p>
 <p>The initial <code>vagrant up</code> command might take a while because it needs to download
 a ~200mb file from the web.  Subsequent <code>vagrant up</code>s will not take nearly as
 long.</p>
+
+<p>If nothing is working, another possibility is to destroy the VM altogether
+using Virtualbox. To do this</p>
       </section>
     </div>
 
