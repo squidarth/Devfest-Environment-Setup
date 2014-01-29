@@ -19,7 +19,7 @@ Vagrant installed.
 Terminal is going to be where most of our development-related software will
 be running.  Simply use Spotlight to open it up
 
-![terminal open](https://raw2.github.com/squidarth/environment-setup/master/static/open_terminal.png)
+![terminal open](static/open_terminal.png)
 
 ### Installing Git
 
@@ -28,7 +28,7 @@ if it has been installed already by loading up Terminal and typing
 `git`, followed by hitting ENTER.
 If git is installed, you should see the following output:
 
-![git output](https://raw2.github.com/squidarth/environment-setup/master/static/git_output_success-3.png)
+![git output](static/git_output_success-3.png)
 
 If not, install git from the [git website](http://git-scm.com/downloads), where
 there are more instructions.
@@ -40,11 +40,11 @@ The simplest way to do this is by using a piece of software called [vagrant](htt
 The first dependency for Vagrant is VirtualBox. To install this, visit [the VirtualBox website](https://www.virtualbox.org/wiki/Downloads)
 and download the version for your operating system.
 
-![virtualbox page](https://raw2.github.com/squidarth/environment-setup/master/static/virtualbox_downloads-2.png).
+![virtualbox page](static/virtualbox_downloads-2.png).
 
 Simply go through the installer until it's finished.
 
-![virtualbox installer](https://raw2.github.com/squidarth/environment-setup/master/static/virtualbox_installer-2.png)
+![virtualbox installer](static/virtualbox_installer-2.png)
 
 ### Installing Vagrant
 
@@ -52,13 +52,13 @@ Next, we need to install Vagrant, which is an easy way to manage VirtualBox
 Virutal Machines.  To do this, visit the [Vagrant website](http://www.vagrantup.com/downloads.html)
 and install the appropriate version for your Operating System.
 
-![vagrant website](https://raw2.github.com/squidarth/environment-setup/master/static/vagrant_downloads-2.png)
+![vagrant website](static/vagrant_downloads-2.png)
 
 Once it has been installed, load up your terminal again and type `vagrant`.
 
 You should see the following output:
 
-![vagrant output](https://raw2.github.com/squidarth/environment-setup/master/static/vagrant_output-2.png)
+![vagrant output](static/vagrant_output-2.png)
 
 If you see this, then you're ready to start developing!
 
@@ -72,17 +72,17 @@ you have already done a couple times), type the command and then hit "enter".
 When you are using the command line, you are always in a certain directory.  To
 check the directory you are in, simply run `pwd`.
 
-![pwd usage](https://raw2.github.com/squidarth/environment-setup/master/static/pwd_usage-2.png)
+![pwd usage](static/pwd_usage-2.png)
 
 To list all the files in the current directory you are in, type the command `ls` (list).
 
-![ls usage](https://raw2.github.com/squidarth/environment-setup/master/static/ls_usage-2.png)
+![ls usage](static/ls_usage-2.png)
 
 To change directories, type the `cd` command, followed by the name of the directory
 that you would like to navigate to.  Note that `~` is the name of your home
 directory (the directory where your Documents directory is).
 
-![cd usage](https://raw2.github.com/squidarth/environment-setup/master/static/cd_usage-2.png)
+![cd usage](static/cd_usage-2.png)
 
 
 ### Getting started with Vagrant
@@ -91,11 +91,11 @@ Now you should be ready to get started using Vagrant to do some web development.
 
 First, navigate to a directory where you would like to start writing code.
 
-![move to devfest](https://raw2.github.com/squidarth/environment-setup/master/static/move_to_devfest-2.png)
+![move to devfest](static/move_to_devfest-2.png)
 
 Then, type the command  `git clone https://github.com/adicu/flask_test.git`
 
-![git clone usage](https://raw2.github.com/squidarth/environment-setup/master/static/git_clone_usage-2.png)
+![git clone usage](static/git_clone_usage-2.png)
 
 What this does is create a directory in the current folder you are in called
 "flask_test", and uses Git, which we installed earlier, to load into that project
@@ -108,7 +108,7 @@ if you had the opportunity to grab files off the thumb drive instead of having
 Open up the file in the `flask_test` directory called `Vagrantfile` in any
 text editor.  It will look like this:
 
-![vagrantfile original](https://raw2.github.com/squidarth/environment-setup/master/static/original_vagrantfile-2.png)
+![vagrantfile original](static/original_vagrantfile-2.png)
 
 Move a file called `precise32.box` from the thumb drive to any directory on your 
 computer, and then change the line that reads `config.vm.box_url = "http://files.vagrantup.com/precise32.box"`
@@ -120,7 +120,7 @@ if you put it in a folder called `~/Downloads`, then, this line should read
 To start the virtual machine for this project, first move to the "flask_test"
 directory, and run the command `vagrant up`.
 
-![vagrant up](https://raw2.github.com/squidarth/environment-setup/master/static/vagrant_up-2.png)
+![vagrant up](static/vagrant_up-2.png)
 
 Once this command finishes executing (it will take a couple minutes), your
 virtual machine will be ready to use.  To access the machine, use the command
@@ -140,7 +140,7 @@ browser to [http://localhost:5000](http://localhost:5000/).
 
 This is all demonstrated here:
 
-![vagrant ssh](https://raw2.github.com/squidarth/environment-setup/master/static/vagrant_ssh-2.png)
+![vagrant ssh](static/vagrant_ssh-2.png)
 
 A couple other important commands to note are `vagrant halt` and `vagrant reload`.
 `vagrant halt` stops the Virtual Machine, while `vagrant halt` restarts it.  These
