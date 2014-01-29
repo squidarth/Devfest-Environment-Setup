@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Devfest Environment Setup : Our Devfest 2014 environment setup files" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Devfest Environment Setup</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/squidarth/Devfest-Environment-Setup">View on GitHub</a>
+
+          <h1 id="project_title">Devfest Environment Setup</h1>
+          <h2 id="project_tagline">Our Devfest 2014 environment setup files</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/squidarth/Devfest-Environment-Setup/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/squidarth/Devfest-Environment-Setup/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="devfest-environment-setup" class="anchor" href="#devfest-environment-setup"><span class="octicon octicon-link"></span></a>Devfest Environment Setup</h1>
+
+<h3>
+<a name="motivation" class="anchor" href="#motivation"><span class="octicon octicon-link"></span></a>Motivation</h3>
+
+<p>During Devfest this year, we will be using a piece of software called
+Vagrant for our development.  Vagrant allows users to really easily manage
+Virtual Machines, which are basically operating systems running on top of your
+current operating system, which we can use for our own software development.</p>
+
+<p>Writing code on a virtual machine has a number of advantages over doing so
+locally on your computer.  Most importantly, installing software for development
+is often one of the most frustrating things about getting started.  We have
+provisioned a virtual machine with all the software you need--so that regardless
+of whether you run a PC or a Mac, you can be up and running as soon as you have
+Vagrant installed.</p>
+
+<h3>
+<a name="opening-up-terminal-mac-only" class="anchor" href="#opening-up-terminal-mac-only"><span class="octicon octicon-link"></span></a>Opening up Terminal (Mac only)</h3>
+
+<p>Terminal is going to be where most of our development-related software will
+be running.  Simply use Spotlight to open it up</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/open_terminal.png" alt="terminal open"></p>
+
+<h3>
+<a name="installing-git" class="anchor" href="#installing-git"><span class="octicon octicon-link"></span></a>Installing Git</h3>
+
+<p>Git is necessary on both Mac and PC to get environments set up.  First, check
+if it has been installed already by loading up Terminal and typing
+<code>git</code>, followed by hitting ENTER.
+If git is installed, you should see the following output:</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/git_output_success-3.png" alt="git output"></p>
+
+<p>If not, install git from the <a href="http://git-scm.com/downloads">git website</a>, where
+there are more instructions.</p>
+
+<h3>
+<a name="installing-virtualbox" class="anchor" href="#installing-virtualbox"><span class="octicon octicon-link"></span></a>Installing VirtualBox</h3>
+
+<p>To make development simpler, we will be doing our development in a Virtual Machine.
+The simplest way to do this is by using a piece of software called <a href="http://vagrantup.com">vagrant</a>.
+The first dependency for Vagrant is VirtualBox. To install this, visit <a href="https://www.virtualbox.org/wiki/Downloads">the VirtualBox website</a>
+and download the version for your operating system.</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/virtualbox_downloads-2.png" alt="virtualbox page">.</p>
+
+<p>Simply go through the installer until it's finished.</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/virtualbox_installer-2.png" alt="virtualbox installer"></p>
+
+<h3>
+<a name="installing-vagrant" class="anchor" href="#installing-vagrant"><span class="octicon octicon-link"></span></a>Installing Vagrant</h3>
+
+<p>Next, we need to install Vagrant, which is an easy way to manage VirtualBox
+Virutal Machines.  To do this, visit the <a href="http://www.vagrantup.com/downloads.html">Vagrant website</a>
+and install the appropriate version for your Operating System.</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/vagrant_downloads-2.png" alt="vagrant website"></p>
+
+<p>Once it has been installed, load up your terminal again and type <code>vagrant</code>.</p>
+
+<p>You should see the following output:</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/vagrant_output-2.png" alt="vagrant output"></p>
+
+<p>If you see this, then you're ready to start developing!</p>
+
+<h3>
+<a name="basic-terminal-use" class="anchor" href="#basic-terminal-use"><span class="octicon octicon-link"></span></a>Basic Terminal Use</h3>
+
+<p>The next couple steps will require knowing a few terminal commands.  The terminal
+is often called the "Command Line", and we'll be using that terminology for the
+rest of this short guide.  In order to execute commands in the command line (which
+you have already done a couple times), type the command and then hit "enter".</p>
+
+<p>When you are using the command line, you are always in a certain directory.  To
+check the directory you are in, simply run <code>pwd</code>.</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/pwd_usage-2.png" alt="pwd usage"></p>
+
+<p>To list all the files in the current directory you are in, type the command <code>ls</code> (list).</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/ls_usage-2.png" alt="ls usage"></p>
+
+<p>To change directories, type the <code>cd</code> command, followed by the name of the directory
+that you would like to navigate to.  Note that <code>~</code> is the name of your home
+directory (the directory where your Documents directory is).</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/cd_usage-2.png" alt="cd usage"></p>
+
+<h3>
+<a name="getting-started-with-vagrant" class="anchor" href="#getting-started-with-vagrant"><span class="octicon octicon-link"></span></a>Getting started with Vagrant</h3>
+
+<p>Now you should be ready to get started using Vagrant to do some web development.</p>
+
+<p>First, navigate to a directory where you would like to start writing code.</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/move_to_devfest-2.png" alt="move to devfest"></p>
+
+<p>Then, type the command  <code>git clone https://github.com/adicu/flask_test.git</code></p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/git_clone_usage-2.png" alt="git clone usage"></p>
+
+<p>What this does is create a directory in the current folder you are in called
+"flask_test", and uses Git, which we installed earlier, to load into that project
+a sample project that we have prepared for you.</p>
+
+<p>Now, we'll be passing around a thumb drive with some files on it at this point,
+if you had the opportunity to grab files off the thumb drive instead of having
+  to download them, here's what you'll need to do to use it with Vagrant:</p>
+
+<p>Open up the file in the <code>flask_test</code> directory called <code>Vagrantfile</code> in any
+text editor.  It will look like this:</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/original_vagrantfile-2.png" alt="vagrantfile original"></p>
+
+<p>Move a file called <code>precise32.box</code> from the thumb drive to any directory on your 
+computer, and then change the line that reads <code>config.vm.box_url = "http://files.vagrantup.com/precise32.box"</code>
+to point to the precise32.box file you got from your computer.  For example,
+if you put it in a folder called <code>~/Downloads</code>, then, this line should read
+  <code>config.vm.box_url = "~/Downloads/precise32.box"</code>.  If you didn't get a chance
+  to get files from the thumb drive, don't worry about this step and move on.</p>
+
+<p>To start the virtual machine for this project, first move to the "flask_test"
+directory, and run the command <code>vagrant up</code>.</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/vagrant_up-2.png" alt="vagrant up"></p>
+
+<p>Once this command finishes executing (it will take a couple minutes), your
+virtual machine will be ready to use.  To access the machine, use the command</p>
+
+<p><code>vagrant ssh</code>.  Once this command has finished executing, you will be inside
+a virtual machine different from your own machine. To return to your local machine,
+simply type the command <code>exit</code>.</p>
+
+<p>The special thing about Vagrant is that you have access inside the Virtual
+Machine to files on your local computer.  Once inside the Virtual Machine,
+type</p>
+
+<p><code>cd /vagrant</code>, followed by <code>ls</code>, and you'll see that the files in the "flask_test"
+folder on your computer are available on this virtual machine.  To prove to yourself
+that everything is working, type <code>python src/application.py</code>, and open up your
+browser to <a href="http://localhost:5000/">http://localhost:5000</a>.</p>
+
+<p>This is all demonstrated here:</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/vagrant_ssh-2.png" alt="vagrant ssh"></p>
+
+<p>A couple other important commands to note are <code>vagrant halt</code> and <code>vagrant reload</code>.
+<code>vagrant halt</code> stops the Virtual Machine, while <code>vagrant halt</code> restarts it.  These
+commands should be your first line of defense if anything seems to be going wrong.</p>
+
+<h3>
+<a name="remarks-on-vagrant-usage-optional" class="anchor" href="#remarks-on-vagrant-usage-optional"><span class="octicon octicon-link"></span></a>Remarks on Vagrant Usage (Optional)</h3>
+
+<p>Congratulations, you now have Vagrant set up successfully!  In this section,
+I'd just like to note a couple things about using Vagrant.</p>
+
+<p>First of all, even though when you are connected to your Vagrant box (what happens after
+typing <code>vagrant ssh</code>), you are on a Virtual Machine, the files in the <code>/vagrant</code>
+folder are actually the same files on your Mac or PC.  This means that you can
+edit those files in any text editor you like, and the changes will immediately
+be reflected in Vagrant.</p>
+
+<p>Second, there are a couple important files in the <code>flask_test</code> folder that you
+should be aware of.  First is the file called <code>Vagrantfile</code>.  This file specifies
+the configuration of Vagrant box.  If you would like to use Vagrant in a different
+project, you can copy this file over to that directory, and then type <code>vagrant up</code>
+in that directory to get started using Vagrant with that new project.</p>
+
+<p>The other file to be aware of is the file called <code>boostrap.sh</code>.  This file is
+a script that provisions the Vagrant box with software needed to start developing
+web applications in Python using the Flask framework.  If you are starting another
+similar project, copy this file to your new project folder as well.</p>
+
+<h3>
+<a name="common-gotchas" class="anchor" href="#common-gotchas"><span class="octicon octicon-link"></span></a>Common Gotchas</h3>
+
+<p>Unfortunately, some people do run into some minor problems with Vagrant.  By
+far the most common problem is the command <code>vagrant up</code> or <code>vagrant halt</code> hanging and running forever.
+This usually happens after somebody has put their computer to sleep and has
+started the computer again. This can be easily remedied through the following
+couple steps:</p>
+
+<p><code>Ctrl-C</code> to get the current commmand to stop.  Then, type <code>vagrant suspend</code> to
+stop the box.  After this, you should be able to type <code>vagrant reload</code> to get
+the box working again.</p>
+
+<p>The initial <code>vagrant up</code> command might take a while because it needs to download
+a ~200mb file from the web.  Subsequent <code>vagrant up</code>s will not take nearly as
+long.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Devfest Environment Setup maintained by <a href="https://github.com/squidarth">squidarth</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
