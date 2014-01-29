@@ -14,12 +14,23 @@ provisioned a virtual machine with all the software you need--so that regardless
 of whether you run a PC or a Mac, you can be up and running as soon as you have
 Vagrant installed.
 
+
+### A Note on Writing Code
+
+All programmers have a text editor that they use to write code.  If you're just
+getting started, we highly recommend you download and install [Sublime Text](http://www.sublimetext.com/2).
+
 ### Opening up Terminal (Mac only)
 
 Terminal is going to be where most of our development-related software will
 be running.  Simply use Spotlight to open it up
 
 ![terminal open](http://squidarth.github.io/static/open_terminal.png)
+
+## Open up Command Prompt (PC onlY)
+
+The PC equivalent of Terminal is a program called "Command Prompt".  To open it,
+click the "Start Menu", navigate to "Accessories", and click "Command Prompt"
 
 ### Installing Git
 
@@ -32,6 +43,28 @@ If git is installed, you should see the following output:
 
 If not, install git from the [git website](http://git-scm.com/downloads), where
 there are more instructions.
+
+### PC Instructions
+
+On PCs there are a couple extra steps in installing git that you should be
+aware of.
+
+Start out by going through the git installation normally, using the installer
+that you downloaded from the [git website](http://git-scm.com/downloads).
+
+![git install](http://squidarth.github.io/static/git_install_msft.PNG)
+
+Once you reach this screen:
+
+![git install](http://squidarth.github.io/static/git_setup_msft.PNG)
+
+Select the option that reads "Run Git and included tools from the Windows Command Prompt".
+This is very important!
+
+To make sure that git was installed correctly, open up the Windows Command Prompt
+and type `git`.  You should see the following output:
+
+![git install](http://squidarth.github.io/static/git_successful_msft.PNG)
 
 ### Installing VirtualBox
 
@@ -64,10 +97,13 @@ If you see this, then you're ready to start developing!
 
 ### Basic Terminal Use
 
+
 The next couple steps will require knowing a few terminal commands.  The terminal
 is often called the "Command Line", and we'll be using that terminology for the
 rest of this short guide.  In order to execute commands in the command line (which
 you have already done a couple times), type the command and then hit "enter".
+
+#### Mac
 
 When you are using the command line, you are always in a certain directory.  To
 check the directory you are in, simply run `pwd`.
@@ -84,6 +120,17 @@ directory (the directory where your Documents directory is).
 
 ![cd usage](http://squidarth.github.io/static/cd_usage-2.png)
 
+#### PC
+
+On PCs, similarly to Mac, in the command prompt, you are always in a certain directory,
+and the path is listed in your prompt, so you always know what directory you
+are in.
+
+`cd` is used to change directories, very similarly to how this is done on Macs.
+Note that on PCs, `\` is used in writing out directory paths, rather than the
+`/` used on Macs.
+
+`dir` is used to list files and directories inside folders.
 
 ### Getting started with Vagrant
 
@@ -129,7 +176,7 @@ The special thing about Vagrant is that you have access inside the Virtual
 Machine to files on your local computer.  Once inside the Virtual Machine,
 type
 
-`cd /vagrant`, followed by `ls`, and you'll see that the files in the "flask_test"
+`cd /vagrant`, followed by `ls` (`dir`) on PC, and you'll see that the files in your 
 folder on your computer are available on this virtual machine.  To prove to yourself
 that everything is working, type `python src/application.py`, and open up your
 browser to [http://localhost:5000](http://localhost:5000/).
@@ -179,3 +226,6 @@ the box working again.
 The initial `vagrant up` command might take a while because it needs to download
 a ~200mb file from the web.  Subsequent `vagrant up`s will not take nearly as
 long.
+
+If nothing is working, another possibility is to destroy the VM altogether
+using Virtualbox. To do this
