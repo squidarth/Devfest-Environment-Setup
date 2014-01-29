@@ -176,14 +176,12 @@ The special thing about Vagrant is that you have access inside the Virtual
 Machine to files on your local computer.  Once inside the Virtual Machine,
 type
 
-`cd /vagrant`, followed by `ls` (`dir`) on PC, and you'll see that the files in your 
-folder on your computer are available on this virtual machine.  To prove to yourself
-that everything is working, type `python src/application.py`, and open up your
-browser to [http://localhost:5000](http://localhost:5000/).
+`cd /vagrant`, followed by `ls` (`dir`) on PC, and you'll see that the files in your
+folder on your computer are available on this virtual machine.
 
-This is all demonstrated here:
+(PC Only) Here is what you should see if you're on a PC:
 
-![vagrant ssh](http://squidarth.github.io/static/vagrant_ssh-2.png)
+![vagrant success](http://squidarth.github.io/static/vagrant_success_msft.png)
 
 A couple other important commands to note are `vagrant halt` and `vagrant reload`.
 `vagrant halt` stops the Virtual Machine, while `vagrant halt` restarts it.  These
