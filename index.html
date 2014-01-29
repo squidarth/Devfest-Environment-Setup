@@ -55,7 +55,7 @@ Vagrant installed.</p>
 <p>Terminal is going to be where most of our development-related software will
 be running.  Simply use Spotlight to open it up</p>
 
-<p><img src="static/open_terminal.png" alt="terminal open"></p>
+<p><img src="http://squidarth.github.io/static/open_terminal.png" alt="terminal open"></p>
 
 <h3>
 <a name="installing-git" class="anchor" href="#installing-git"><span class="octicon octicon-link"></span></a>Installing Git</h3>
@@ -65,7 +65,7 @@ if it has been installed already by loading up Terminal and typing
 <code>git</code>, followed by hitting ENTER.
 If git is installed, you should see the following output:</p>
 
-<p><img src="static/git_output_success-3.png" alt="git output"></p>
+<p><img src="http://squidarth.github.io/static/git_output_success-3.png" alt="git output"></p>
 
 <p>If not, install git from the <a href="http://git-scm.com/downloads">git website</a>, where
 there are more instructions.</p>
@@ -78,11 +78,11 @@ The simplest way to do this is by using a piece of software called <a href="http
 The first dependency for Vagrant is VirtualBox. To install this, visit <a href="https://www.virtualbox.org/wiki/Downloads">the VirtualBox website</a>
 and download the version for your operating system.</p>
 
-<p><img src="static/virtualbox_downloads-2.png" alt="virtualbox page">.</p>
+<p><img src="http://squidarth.github.io/static/virtualbox_downloads-2.png" alt="virtualbox page">.</p>
 
 <p>Simply go through the installer until it's finished.</p>
 
-<p><img src="static/virtualbox_installer-2.png" alt="virtualbox installer"></p>
+<p><img src="http://squidarth.github.io/static/virtualbox_installer-2.png" alt="virtualbox installer"></p>
 
 <h3>
 <a name="installing-vagrant" class="anchor" href="#installing-vagrant"><span class="octicon octicon-link"></span></a>Installing Vagrant</h3>
@@ -91,13 +91,13 @@ and download the version for your operating system.</p>
 Virutal Machines.  To do this, visit the <a href="http://www.vagrantup.com/downloads.html">Vagrant website</a>
 and install the appropriate version for your Operating System.</p>
 
-<p><img src="static/vagrant_downloads-2.png" alt="vagrant website"></p>
+<p><img src="http://squidarth.github.io/static/vagrant_downloads-2.png" alt="vagrant website"></p>
 
 <p>Once it has been installed, load up your terminal again and type <code>vagrant</code>.</p>
 
 <p>You should see the following output:</p>
 
-<p><img src="static/vagrant_output-2.png" alt="vagrant output"></p>
+<p><img src="http://squidarth.github.io/static/vagrant_output-2.png" alt="vagrant output"></p>
 
 <p>If you see this, then you're ready to start developing!</p>
 
@@ -112,43 +112,38 @@ you have already done a couple times), type the command and then hit "enter".</p
 <p>When you are using the command line, you are always in a certain directory.  To
 check the directory you are in, simply run <code>pwd</code>.</p>
 
-<p><img src="static/pwd_usage-2.png" alt="pwd usage"></p>
+<p><img src="http://squidarth.github.io/static/pwd_usage-2.png" alt="pwd usage"></p>
 
 <p>To list all the files in the current directory you are in, type the command <code>ls</code> (list).</p>
 
-<p><img src="static/ls_usage-2.png" alt="ls usage"></p>
+<p><img src="http://squidarth.github.io/static/ls_usage-2.png" alt="ls usage"></p>
 
 <p>To change directories, type the <code>cd</code> command, followed by the name of the directory
 that you would like to navigate to.  Note that <code>~</code> is the name of your home
 directory (the directory where your Documents directory is).</p>
 
-<p><img src="static/cd_usage-2.png" alt="cd usage"></p>
+<p><img src="http://squidarth.github.io/static/cd_usage-2.png" alt="cd usage"></p>
 
 <h3>
 <a name="getting-started-with-vagrant" class="anchor" href="#getting-started-with-vagrant"><span class="octicon octicon-link"></span></a>Getting started with Vagrant</h3>
 
 <p>Now you should be ready to get started using Vagrant to do some web development.</p>
 
-<p>First, navigate to a directory where you would like to start writing code.</p>
+<p>At this top of the page, you should be able to download a zip file that contains
+three files, <code>Vagrantfile</code>, <code>bootstrap.sh</code>, and <code>README.md</code>.  Copy <code>Vagrantfile</code>
+and <code>bootstrap.sh</code> to a directory in which you would like to start writing
+code.</p>
 
-<p><img src="static/move_to_devfest-2.png" alt="move to devfest"></p>
-
-<p>Then, type the command  <code>git clone https://github.com/adicu/flask_test.git</code></p>
-
-<p><img src="static/git_clone_usage-2.png" alt="git clone usage"></p>
-
-<p>What this does is create a directory in the current folder you are in called
-"flask_test", and uses Git, which we installed earlier, to load into that project
-a sample project that we have prepared for you.</p>
+<p><img src="http://squidarth.github.io/static/move_to_devfest-2.png" alt="move to devfest"></p>
 
 <p>Now, we'll be passing around a thumb drive with some files on it at this point,
 if you had the opportunity to grab files off the thumb drive instead of having
   to download them, here's what you'll need to do to use it with Vagrant:</p>
 
-<p>Open up the file in the <code>flask_test</code> directory called <code>Vagrantfile</code> in any
+<p>Open up the file called <code>Vagrantfile</code> in any
 text editor.  It will look like this:</p>
 
-<p><img src="static/original_vagrantfile-2.png" alt="vagrantfile original"></p>
+<p><img src="http://squidarth.github.io/static/original_vagrantfile-2.png" alt="vagrantfile original"></p>
 
 <p>Move a file called <code>precise32.box</code> from the thumb drive to any directory on your 
 computer, and then change the line that reads <code>config.vm.box_url = "http://files.vagrantup.com/precise32.box"</code>
@@ -157,10 +152,10 @@ if you put it in a folder called <code>~/Downloads</code>, then, this line shoul
   <code>config.vm.box_url = "~/Downloads/precise32.box"</code>.  If you didn't get a chance
   to get files from the thumb drive, don't worry about this step and move on.</p>
 
-<p>To start the virtual machine for this project, first move to the "flask_test"
+<p>To start the virtual machine for this project, first move to your project 
 directory, and run the command <code>vagrant up</code>.</p>
 
-<p><img src="static/vagrant_up-2.png" alt="vagrant up"></p>
+<p><img src="http://squidarth.github.io/static/vagrant_up-2.png" alt="vagrant up"></p>
 
 <p>Once this command finishes executing (it will take a couple minutes), your
 virtual machine will be ready to use.  To access the machine, use the command</p>
@@ -180,7 +175,7 @@ browser to <a href="http://localhost:5000/">http://localhost:5000</a>.</p>
 
 <p>This is all demonstrated here:</p>
 
-<p><img src="static/vagrant_ssh-2.png" alt="vagrant ssh"></p>
+<p><img src="http://squidarth.github.io/static/vagrant_ssh-2.png" alt="vagrant ssh"></p>
 
 <p>A couple other important commands to note are <code>vagrant halt</code> and <code>vagrant reload</code>.
 <code>vagrant halt</code> stops the Virtual Machine, while <code>vagrant halt</code> restarts it.  These
@@ -198,7 +193,7 @@ folder are actually the same files on your Mac or PC.  This means that you can
 edit those files in any text editor you like, and the changes will immediately
 be reflected in Vagrant.</p>
 
-<p>Second, there are a couple important files in the <code>flask_test</code> folder that you
+<p>Second, there are a couple important files that you
 should be aware of.  First is the file called <code>Vagrantfile</code>.  This file specifies
 the configuration of Vagrant box.  If you would like to use Vagrant in a different
 project, you can copy this file over to that directory, and then type <code>vagrant up</code>
