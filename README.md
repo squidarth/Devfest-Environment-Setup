@@ -226,4 +226,7 @@ a ~200mb file from the web.  Subsequent `vagrant up`s will not take nearly as
 long.
 
 If nothing is working, another possibility is to destroy the VM altogether
-using Virtualbox. To do this
+using Virtualbox. To do this, open up VirtualBox on your machine, right-click
+the box that you started, and click "Remove".
+
+![vagrant remove](http://squidarth.github.io/static/virtualbox_remove-2.png)
