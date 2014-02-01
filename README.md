@@ -27,7 +27,7 @@ be running.  Simply use Spotlight to open it up
 
 ![terminal open](http://squidarth.github.io/static/open_terminal.png)
 
-## Open up Command Prompt (PC onlY)
+## Open up Command Prompt (PC only)
 
 The PC equivalent of Terminal is a program called "Command Prompt".  To open it,
 click the "Start Menu", navigate to "Accessories", and click "Command Prompt"
