@@ -184,7 +184,7 @@ folder on your computer are available on this virtual machine.
 ![vagrant success](http://squidarth.github.io/static/vagrant_success_msft.png)
 
 A couple other important commands to note are `vagrant halt` and `vagrant reload`.
-`vagrant halt` stops the Virtual Machine, while `vagrant halt` restarts it.  These
+`vagrant halt` stops the Virtual Machine, while `vagrant reload` restarts it.  These
 commands should be your first line of defense if anything seems to be going wrong.
 
 ### Remarks on Vagrant Usage (Optional)
